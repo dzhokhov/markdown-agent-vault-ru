@@ -11,6 +11,7 @@ This project uses early semantic versions. Until `v1.0.0`, breaking changes to s
 - Added installation guidance and a compatibility table for common file-capable agents.
 - Added Claude Cowork notes and the bundled `skills/sync-cowork-skills.sh` synchronization script.
 - Added Google Antigravity to the agent list with its agent-management mode.
+- Added intent reconstruction guidance for underspecified agent requests.
 
 ## [v0.1.3] - 2026-05-02
 
