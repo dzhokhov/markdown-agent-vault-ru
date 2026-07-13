@@ -1,0 +1,109 @@
+schema_version: 1
+
+repo:
+  name: "example-contour"
+  contour: "example-contour"
+  owner: "@github-handle"
+  visibility: "private"
+  data_class: "ordinary"
+  main_branch: "main"
+  durable_source_of_truth: "github-main-after-accepted-change"
+
+human_model:
+  primary_users:
+    - "manager-via-agent"
+  user_does_not_need_terminal: true
+  agent_must_explain_changes_plainly: true
+
+access:
+  owners:
+    - "@github-handle"
+  teams:
+    read: []
+    write: []
+    review: []
+  private_data_allowed: false
+
+write_model:
+  direct_push_to_main_allowed: false
+  default_change_path: "branch-and-change-request"
+  required_reviewers:
+    - "@github-handle"
+  agent_branch_prefix: "agent/"
+
+agent_policy:
+  read_first:
+    - "AGENTS.md"
+    - "repository-manifest.yml"
+    - "README.md"
+    - "context.md"
+  may_edit_without_asking:
+    - "context.md"
+    - "plan.md"
+    - "tasks.md"
+    - "log.md"
+    - "materials/**/*.md"
+  ask_before:
+    - "deleting_files"
+    - "moving_or_renaming_files"
+    - "changing_AGENTS_or_manifest"
+    - "touching_people_finance_legal_or_private_materials"
+    - "adding_or_editing_meeting_materials"
+    - "adding_binary_files"
+    - "changing_access_or_CODEOWNERS"
+  never_commit:
+    - ".DS_Store"
+    - ".obsidian/**"
+    - "secrets/**"
+    - "*.env"
+    - "*password*"
+    - "*token*"
+    - "00_inbox/raw/**"
+    - "**/*_private.csv"
+
+meeting_policy:
+  required_in_this_repository: true
+  default_meeting_paths:
+    - "materials/meetings/**"
+    - "meetings/**"
+  required_frontmatter:
+    - "meeting_scope"
+    - "audience"
+    - "sensitivity"
+  allowed_meeting_scope_values:
+    - "team"
+    - "personal"
+    - "owner_private"
+    - "external_public"
+  allowed_audience_values:
+    - "repo_readers"
+    - "owner_only"
+    - "named_private_team"
+    - "external_public"
+  ask_if_unclear: true
+
+external_sources:
+  tasks:
+    name: "external-task-tracker"
+    rule: "If a live tracker is the team source of truth, markdown stores plans, decisions and summaries."
+  files:
+    name: "external-file-storage"
+    rule: "Large media and raw source files stay outside Git unless explicitly approved."
+
+validation:
+  required_before_change_request:
+    - "python3 scripts/check_links.py"
+    - "python3 scripts/check_forbidden_markers.py"
+    - "python3 scripts/check_repository_manifest.py ."
+  manager_summary_required: true
+
+action_log:
+  human_readable_log: "log.md"
+  change_request_summary_required: true
+  log_rule: "Every meaningful agent change records what changed, why, source, checks and whether owner review was required."
+
+questions_for_user:
+  when_ambiguous_contour: "Уточни, к какому контуру относится задача."
+  when_private_data_risk: "Здесь есть риск закрытых данных. Переносить в закрытый репозиторий или внешний источник?"
+  when_meeting_material: "Это материал встречи. Это командный материал, персональная договорённость, закрытая заметка владельца или внешнее публичное резюме?"
+  when_deleting_or_moving: "Это удалит или перенесёт файлы. Подтверждаешь?"

@@ -6,6 +6,11 @@ Describe the change in 2-4 sentences.
 
 - 
 
+## Private Data Risk
+
+- [ ] This change does not add secrets, raw imports, private notes, personal data, financial data, legal data, or other restricted material.
+- [ ] If there is any risk, it is explained here:
+
 ## Validation
 
 Commands run:
@@ -19,3 +24,7 @@ python3 scripts/inventory.py
 ## Known Gaps
 
 - 
+
+## Human Review Needed
+
+-

@@ -14,7 +14,24 @@ Goals:
 - one minimal example shows the first-session workflow;
 - local validation scripts run without external services.
 
-## v0.2.0 - Feedback And First External Examples
+## v0.2.0 - Project Creation, Memory, And Contour Repositories
+
+Status: prepared locally.
+
+Goals:
+
+- add `project-creator` for complete agent-created projects;
+- add autonomous planning guidance with Intent Lock, Owner Interaction Policy, and Quality Criteria;
+- separate current memory from archive sources;
+- add memory trust fields, ledger, anti-memory, conflicts, and audit templates;
+- add compressed meeting history through `context-compression` and `meetings/README.md`;
+- document two usage modes: personal local vault and contour GitHub repository;
+- add `repository-manifest.yml` for machine-readable repository boundaries;
+- add templates for contour `AGENTS.md`, `README.md`, and change request text;
+- add a safe minimal contour repository example;
+- add local validation for contour repositories.
+
+## v0.3.0 - Feedback And First External Examples
 
 Planned:
 
@@ -24,7 +41,7 @@ Planned:
 - add a checklist for adapting the starter pack to an existing Markdown vault;
 - document known limitations.
 
-## v0.3.0 - Tool Compatibility Notes
+## v0.4.0 - Tool Compatibility Notes
 
 Planned:
 

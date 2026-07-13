@@ -41,7 +41,7 @@ verification_status: active
 | Слой из контекста | Куда идёт | Правило-хранитель |
 |---|---|---|
 | Execution step агента | `<project>/tasks.md`, Active/Next | Правило 10 |
-| Milestone, Goal, Non-goal, Acceptance, Drift, Contingency | `<project>/plan.md` | Правило 12 |
+| Milestone, Goal, Intent Lock, Non-goal, Acceptance, Quality Criteria, Drift, Contingency | `<project>/plan.md` | Правило 12 |
 | **Блокер milestone'а (first-class)** | **`<project>/plan.md §Blockers`, карточка Bx** | **Правило 12 blocker protocol** |
 | Устойчивый инвариант | `<project>/context.md` | Правило 14 |
 | Решение, изменение состояния, открытие/закрытие блокера | `<project>/log.md`, 1 строка | Правило 5 + Правило 8 |
@@ -54,8 +54,9 @@ verification_status: active
 
 ### `<project>/plan.md`
 - Обязателен для каждого активного проекта.
-- Содержит: `Goal`, `Non-goals`, `Appetite`, `Source of truth`, `Milestones` (каждый с `Acceptance` и статусом `not-started | in-progress | done | blocked on Bx`), **`Blockers`**, **`Blockers — Resolved`**, `Drift Guard`, `Contingency`.
-- Медленный файл. Меняется, когда меняется цель, appetite, порядок milestones или состояние блокеров.
+- Содержит: `Goal`, `Intent Lock`, `Owner Interaction Policy`, `Non-goals`, `Appetite`, `Source of truth`, `Milestones` (каждый с `Acceptance` и статусом `not-started | in-progress | done | blocked on Bx`), `Quality Criteria`, **`Blockers`**, **`Blockers — Resolved`**, `Drift Guard`, `Contingency`, `Review Protocol`.
+- Медленный файл. Меняется, когда меняется цель, appetite, порядок milestones, критерии качества, политика участия владельца или состояние блокеров.
+- При создании проекта или существенной правке плана агент пишет `plan.md` сам. Владельца нельзя просить сформулировать пункты плана, рубежи или критерии качества; допустим только короткий вопрос по развилке, которая меняет цель, границы, источник правды или цену ошибки.
 - Drift protocol: сначала правка `plan.md`, затем одна строка в `log.md`, только потом действовать.
 - Blocker protocol: новый блокер → карточка `Bx` в `§Blockers` + статус milestone `blocked on Bx` + строка `⏸️ NEW BLOCKER Bx` в log.md. Разрешение → обратный порядок, ritual §5.4.2 методологии. `tasks.md` при открытии/закрытии блокера не трогается.
 
@@ -70,7 +71,7 @@ verification_status: active
 ### `<project>/tasks.md`
 - Содержимое: только **исполнение**, не размышление.
 - Строка вида «понять, что делать с X» — не сюда, это в `plan.md` под соответствующий milestone.
-- Запрет: `Goal`, `Milestones`, `Contingency`, **`Blocked` секции (блокеры — в `plan.md §Blockers` как first-class)**.
+- Запрет: `Goal`, `Milestones`, `Contingency`, `Quality Criteria`, **`Blocked` секции (блокеры — в `plan.md §Blockers` как first-class)**.
 - Один `ACTIVE` шаг в каждый момент.
 
 ### `01_now/ops/<contour>/delegations/<person-slug>.md`
@@ -129,6 +130,7 @@ verification_status: active
 - Применять `tasks.md` как журнал событий — это `log.md`.
 - Автоматически переносить тему из эпизодики в `context.md` по счётчику, без формулировки опиниона.
 - **Держать блокеры в `tasks.md §Blocked`** — секции больше нет, блокеры живут в `plan.md §Blockers` как first-class сущности с cascade через `Блокирует: Mx`.
+- **Просить владельца написать план, рубежи или критерии качества** — при создании проекта это обязанность агента; владелец подтверждает только основополагающие развилки.
 - **Писать блокер без связи с milestone'ами** — поле `Блокирует` обязательно, иначе блокер теряет адресность.
 - **Закрывать блокер сначала в `tasks.md`** — ritual разрешения идёт сверху вниз: plan.md → log.md → delegations/, не наоборот.
 - **Записывать одну и ту же delegated-work задачу в plan.md §Blockers и в delegations/ без двусторонней ссылки** — ссылки обязательны, иначе файлы расходятся.

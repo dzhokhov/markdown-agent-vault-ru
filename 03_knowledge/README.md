@@ -24,5 +24,14 @@ source_path: "03_knowledge/README.md"
 - [Методология происхождения знаний](./vault-provenance-methodology.md)
 - [Стандарт разработки с агентом](./ai/owner-only-agent-dev-standard-2026-03.md)
 - [Инструкция восстановления намерения агента](./ai/agent-intent-reconstruction-instruction-2026-06.md)
+- [Методология планирования для LLM-агента](./ai/agent-plan-methodology-research-2026-07.md)
 - [Переход в новый чат](./ai/context-window-signaling-and-new-dialog-handoff-2026-04.md)
 - [Общие правила разработки с агентом](./ai/general-rules-for-agentic-development-in-local-vault-2026-03.md)
+
+<!-- AUTOGEN-NAV START -->
+## Автодобавленные ссылки
+### Файлы каталога
+- [context-window-signaling-and-new-dialog-handoff-2026-04.md](./context-window-signaling-and-new-dialog-handoff-2026-04.md)
+- [general-rules-for-agentic-development-in-local-vault-2026-03.md](./general-rules-for-agentic-development-in-local-vault-2026-03.md)
+- [owner-only-agent-dev-standard-2026-03.md](./owner-only-agent-dev-standard-2026-03.md)
+<!-- AUTOGEN-NAV END -->

@@ -3,7 +3,7 @@ id: vault-methodology-starter-pack-readme
 type: index
 status: active
 created: 2026-04-30
-updated: 2026-05-04
+updated: 2026-07-13
 aliases:
   - "Стартовый комплект методологии хранилища"
 tags: [vault, methodology, starter-pack, russian]
@@ -34,6 +34,12 @@ source_path: "README.md"
 - `01_now/` хранит активные проекты и текущую работу;
 - `03_knowledge/` хранит переиспользуемые знания;
 - `log.md`, `plan.md`, `tasks.md` и `context.md` помогают новой сессии продолжить работу без догадок.
+- `project-creator` создаёт новый проект целиком: агент сам пишет план, очередь исполнения, контекст, журнал и входной README;
+- `vault-memory` отделяет актуальную память от архива: старые встречи и логи остаются источниками, но не подменяют текущую картину;
+- слой доверия к памяти заставляет важные утверждения иметь тип, источник, основание, уровень доверия и дату проверки;
+- `context-compression` сжимает историю регулярных встреч, чтобы агент не перечитывал весь архив и не принимал устаревшие решения за актуальные.
+
+Дополнительный режим — [контурный GitHub-репозиторий](./docs/github-contour-repositories.md): отдельный репозиторий для долгоживущей области работы, где агент готовит изменения через ветку и заявку на изменение, а человек получает понятное описание риска и результата.
 
 ## Кому полезно
 
@@ -52,6 +58,18 @@ source_path: "README.md"
 - магическая память;
 - замена трекера задач;
 - универсальная методология для всех людей и культур.
+
+## Режимы использования
+
+### Личное локальное хранилище
+
+Основной режим: один владелец ведёт рабочую папку с агентом. Состояние проекта живёт в файлах, а агент соблюдает `AGENTS.md`, правила маршрутизации, индексы и журналы.
+
+### Контурный GitHub-репозиторий
+
+Режим для команды, продукта, клиента или другой долгоживущей области. Один контур живёт в одном репозитории; границы описывает `repository-manifest.yml`; изменения идут через заявку на изменение; закрытые данные не смешиваются с обычным слоем.
+
+См. руководство [Контурные GitHub-репозитории](./docs/github-contour-repositories.md) и пример [examples/github-contour-repository](./examples/github-contour-repository/README.md).
 
 ## Как установить
 
@@ -79,7 +97,7 @@ cd my-vault
    ```
 
 4. Положи небольшой тестовый файл в `00_inbox/`.
-5. Попроси агента создать учебный проект, обновить ссылки и записать событие в журнал.
+5. Попроси агента создать учебный проект через `project-creator`, обновить ссылки и записать событие в журнал.
 6. Сравни результат с примером [examples/first-session](./examples/first-session/README.md).
 
 Обычный чат-бот без доступа к локальным файлам не сможет полноценно пользоваться этой методологией. Нужен агент, который видит папку, читает правила и может предлагать или вносить изменения в файлы.
@@ -140,9 +158,12 @@ COWORK_SKILLS="research parking resume" ./skills/sync-cowork-skills.sh
 | [04_logs/](./04_logs/README.md) | Хронология, обзоры и журналы решений |
 | [90_archive/](./90_archive/README.md) | Завершённое и устаревшее |
 | [meta/](./meta/README.md) | Правила, шаблоны и служебные индексы |
+| [meta/memory/](./meta/memory/README.md) | Журнал изменений памяти, антипамять и конфликты |
 | [skills/](./skills/README.md) | Скиллы для повторяющихся типов задач |
 | [scripts/](./scripts/README.md) | Локальные проверки |
 | [examples/first-session/](./examples/first-session/README.md) | Минимальный пример первого цикла |
+| [docs/github-contour-repositories.md](./docs/github-contour-repositories.md) | Руководство по отдельным GitHub-репозиториям для контуров |
+| [examples/github-contour-repository/](./examples/github-contour-repository/README.md) | Минимальный пример контурного GitHub-репозитория |
 
 ## Чем отличается
 
@@ -163,11 +184,15 @@ COWORK_SKILLS="research parking resume" ./skills/sync-cowork-skills.sh
 - переносимая структура папок;
 - правила агента;
 - шаблоны проектов;
+- автономное создание проектов через `project-creator`;
 - маршрутизация материалов;
+- правило актуальной памяти и слой доверия к утверждениям;
+- сжатие истории регулярных встреч;
 - онбординг;
 - скиллы;
 - локальные проверки;
-- минимальный пример первого цикла.
+- минимальный пример первого цикла;
+- минимальный режим контурного GitHub-репозитория с манифестом, шаблонами, примером и проверкой.
 
 Пока не готово:
 
@@ -186,6 +211,28 @@ python3 scripts/check_links.py
 python3 scripts/check_forbidden_markers.py
 ```
 
+Для проверки примера контурного GitHub-репозитория:
+
+```bash
+python3 scripts/validate_contour_repo.py examples/github-contour-repository
+```
+
 ## Лицензия
 
 MIT. См. [LICENSE](./LICENSE).
+
+<!-- AUTOGEN-NAV START -->
+## Автодобавленные ссылки
+### Файлы каталога
+- [CHANGELOG.md](./CHANGELOG.md)
+- [CONTRIBUTING.md](./CONTRIBUTING.md)
+- [PULL_REQUEST_TEMPLATE.md](./PULL_REQUEST_TEMPLATE.md)
+- [ROADMAP.md](./ROADMAP.md)
+- [SUPPORT.md](./SUPPORT.md)
+### Подкаталоги
+- [.github](.github/README.md)
+- [03_knowledge](./03_knowledge/README.md)
+- [docs](./docs/README.md)
+- [meta](./meta/README.md)
+- [skills](./skills/README.md)
+<!-- AUTOGEN-NAV END -->

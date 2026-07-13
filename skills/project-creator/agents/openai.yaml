@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Creator"
+  short_description: "Создаёт проекты с автономным планом"
+  default_prompt: "Используй $project-creator, чтобы создать проект из контекста текущего чата."

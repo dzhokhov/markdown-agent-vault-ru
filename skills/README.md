@@ -3,7 +3,7 @@ id: skills-index
 type: note
 status: active
 created: 2026-03-20
-updated: 2026-05-04
+updated: 2026-07-13
 aliases:
   - "Индекс скиллов"
   - "Кастомные скиллы vault"
@@ -20,11 +20,13 @@ source_path: "skills/README.md"
 
 ### Операционные скиллы
 - [vault-onboarding-guide](./vault-onboarding-guide/SKILL.md) — интерактивный проводник по первому запуску хранилища: учебные циклы, практика на файлах, удержание маршрута.
+- [project-creator](./project-creator/SKILL.md) — создание нового проекта с автономным `plan.md`, стартовыми файлами и обновлением индексов.
 - [skill-creator](./skill-creator/SKILL.md) — создание, доработка, проверка и оптимизация скиллов для агентов.
 - [owner-only-dev-orchestrator](./owner-only-dev-orchestrator/SKILL.md) — оркестрация полного цикла разработки в режиме owner-only.
 - [test-gates](./test-gates/SKILL.md) — запуск quality gates и итоговый статус `GREEN/YELLOW/RED`.
 - [release-rollback](./release-rollback/SKILL.md) — релизная готовность и безопасный rollback.
 - [meeting-processing](./meeting-processing/SKILL.md) — обработка встреч, извлечение решений/действий, маршрутизация в контур.
+- [context-compression](./context-compression/SKILL.md) — сжатая историческая память встреч, решений, разворотов и открытых вопросов.
 - [research](./research/SKILL.md) — source-first ресёрч с компенсацией искажений и обязательной фиксацией результата.
 - [landing-copywriter](./landing-copywriter/SKILL.md) — создание Hero-блоков и первого экрана лендинга.
 - [personal-brand-content](./personal-brand-content/SKILL.md) — экспертный контент для личного бренда или авторского канала.
@@ -48,3 +50,21 @@ source_path: "skills/README.md"
 
 ## Следующий шаг
 Подключать соответствующие скиллы явно в prompt автоматизаций через формат `[$skill-name](./abs-path-to-SKILL.md)` для детерминированного исполнения pipeline.
+
+<!-- AUTOGEN-NAV START -->
+## Автодобавленные ссылки
+### Подкаталоги
+- [case-forensics](./case-forensics/README.md)
+- [context-compression](./context-compression/README.md)
+- [event-intelligence](./event-intelligence/README.md)
+- [landing-copywriter](./landing-copywriter/README.md)
+- [network-analytics](./network-analytics/README.md)
+- [new-dialog-handoff](./new-dialog-handoff/README.md)
+- [owner-only-dev-orchestrator](./owner-only-dev-orchestrator/README.md)
+- [project-creator](./project-creator/README.md)
+- [release-rollback](./release-rollback/README.md)
+- [slide-copywriter](./slide-copywriter/README.md)
+- [test-gates](./test-gates/README.md)
+- [translation-editorial](./translation-editorial/README.md)
+- [vault-onboarding-guide](./vault-onboarding-guide/README.md)
+<!-- AUTOGEN-NAV END -->
