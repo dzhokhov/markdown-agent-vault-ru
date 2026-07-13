@@ -36,14 +36,6 @@ No unreleased changes yet.
 - Updated onboarding and quickstart docs to explain the local-vault mode and the contour-repository mode.
 - Updated `AGENTS.md`, write protocol, contour isolation, and pull request template for contour repository workflows.
 
-## [v0.1.3] - 2026-05-02
-
-### Removed
-
-- Removed the text-editing skill that referenced a named third-party editing methodology.
-- Removed the bundled stop-word reference list for that skill.
-- Removed links and routing references to the deleted skill from adjacent skills and indexes.
-
 ## [v0.1.2] - 2026-05-02
 
 ### Changed

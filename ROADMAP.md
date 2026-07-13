@@ -16,7 +16,7 @@ Goals:
 
 ## v0.2.0 - Project Creation, Memory, And Contour Repositories
 
-Status: prepared locally.
+Status: released.
 
 Goals:
 
