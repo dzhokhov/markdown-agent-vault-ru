@@ -1,4 +1,4 @@
-# 01_now / projects / 2026-vault-methodology-starter-pack-promotion / worktree / vault-methodology-starter-pack / skills / owner-only-dev-orchestrator / agents
+# skills / owner-only-dev-orchestrator / agents
 
 Навигационный указатель каталога.
 

@@ -1,15 +1,3 @@
----
-id: vault-methodology-starter-pack-readme
-type: index
-status: active
-created: 2026-04-30
-updated: 2026-07-13
-aliases:
-  - "Стартовый комплект методологии хранилища"
-tags: [vault, methodology, starter-pack, russian]
-source_path: "README.md"
----
-
 # Стартовый комплект методологии хранилища
 
 ## Суть
@@ -230,7 +218,6 @@ MIT. См. [LICENSE](./LICENSE).
 - [ROADMAP.md](./ROADMAP.md)
 - [SUPPORT.md](./SUPPORT.md)
 ### Подкаталоги
-- [.github](.github/README.md)
 - [03_knowledge](./03_knowledge/README.md)
 - [docs](./docs/README.md)
 - [meta](./meta/README.md)

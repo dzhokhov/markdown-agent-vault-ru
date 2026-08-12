@@ -1,4 +1,4 @@
-# 01_now / projects / 2026-vault-methodology-starter-pack-promotion / worktree / vault-methodology-starter-pack / skills / test-gates / references
+# skills / test-gates / references
 
 Навигационный указатель каталога.
 

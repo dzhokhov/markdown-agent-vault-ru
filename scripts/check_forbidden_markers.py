@@ -34,7 +34,7 @@ FORBIDDEN_PATTERNS = [
     r"зарплат",
     r"api[_-]?key",
     r"Keychain",
-    r"01_now/(ops|projects)/2026-",
+    r"01_now\s*/\s*(ops|projects)\s*/\s*2026-",
     r"90_archive/2026-",
     r"employee-directory",
     r"Super CEO",

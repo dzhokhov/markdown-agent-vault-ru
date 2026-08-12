@@ -1,4 +1,4 @@
-# 01_now / projects / 2026-vault-methodology-starter-pack-promotion / worktree / vault-methodology-starter-pack / skills / landing-copywriter
+# skills / landing-copywriter
 
 Навигационный указатель каталога.
 

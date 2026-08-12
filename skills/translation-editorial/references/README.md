@@ -1,4 +1,4 @@
-# 01_now / projects / 2026-vault-methodology-starter-pack-promotion / worktree / vault-methodology-starter-pack / skills / translation-editorial / references
+# skills / translation-editorial / references
 
 Навигационный указатель каталога.
 

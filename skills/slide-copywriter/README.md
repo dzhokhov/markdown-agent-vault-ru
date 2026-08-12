@@ -1,4 +1,4 @@
-# 01_now / projects / 2026-vault-methodology-starter-pack-promotion / worktree / vault-methodology-starter-pack / skills / slide-copywriter
+# skills / slide-copywriter
 
 Навигационный указатель каталога.
 
