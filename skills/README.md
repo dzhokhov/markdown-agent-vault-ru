@@ -26,6 +26,7 @@ source_path: "skills/README.md"
 - [test-gates](./test-gates/SKILL.md) — запуск quality gates и итоговый статус `GREEN/YELLOW/RED`.
 - [release-rollback](./release-rollback/SKILL.md) — релизная готовность и безопасный rollback.
 - [meeting-processing](./meeting-processing/SKILL.md) — обработка встреч, извлечение решений/действий, маршрутизация в контур.
+- [meeting-to-sales-article](./meeting-to-sales-article/SKILL.md) — превращение продуктовой встречи, презентации и вопросов в проверяемую справочную статью для продавцов.
 - [context-compression](./context-compression/SKILL.md) — сжатая историческая память встреч, решений, разворотов и открытых вопросов.
 - [research](./research/SKILL.md) — source-first ресёрч с компенсацией искажений и обязательной фиксацией результата.
 - [landing-copywriter](./landing-copywriter/SKILL.md) — создание Hero-блоков и первого экрана лендинга.
