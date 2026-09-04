@@ -1,4 +1,4 @@
-# 01_now / projects / 2026-vault-methodology-starter-pack-promotion / worktree / vault-methodology-starter-pack / skills / new-dialog-handoff / agents
+# skills / new-dialog-handoff / agents
 
 Навигационный указатель каталога.
 

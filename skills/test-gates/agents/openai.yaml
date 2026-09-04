@@ -1,4 +1,6 @@
 interface:
-  display_name: "Test Gates"
-  short_description: "Run quality gates and return a strict gate report"
-  default_prompt: "Run all required quality gates for this change and produce an overall GREEN/YELLOW/RED status."
+  display_name: "Независимый тестировщик"
+  short_description: "Проверяет точную фиксацию без исправления кода"
+  default_prompt: "Use $test-gates to independently test this exact Git revision and return reproducible evidence."
+policy:
+  allow_implicit_invocation: false

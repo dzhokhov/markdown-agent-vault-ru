@@ -1,6 +1,6 @@
 # Стартовые файлы проекта: шаблоны и примеры
 
-Заполненные образцы `README.md`, `context.md`, `tasks.md`, `log.md` и снипеты правок индексов. Пример — `YYYY-demo-product-positioning-strategy` (режим `operational`), тот же, что в [plan-authoring.md](./plan-authoring.md). Frontmatter — по [write-protocol §1](../../../meta/rules/write-protocol.md): `id`, `type`, `status`, `created`, `updated`, `aliases` (≥1 русский), `tags`, `source_path`. Даты — сегодняшние (`date +%F`).
+Заполненные образцы `README.md`, `context.md`, `tasks.md`, `log.md` и снипеты правок индексов. Пример — `2026-acme-shop-positioning-strategy` (режим `operational`), тот же, что в [plan-authoring.md](./plan-authoring.md). Frontmatter — по [write-protocol §1](../../../meta/rules/write-protocol.md): `id`, `type`, `status`, `created`, `updated`, `aliases` (≥1 русский), `tags`, `source_path`. Даты — сегодняшние (`date +%F`).
 
 ## README.md — точка входа
 
@@ -8,15 +8,15 @@
 
 ```markdown
 ---
-id: YYYY-demo-product-positioning-strategy-readme
+id: 2026-acme-shop-positioning-strategy-readme
 type: project
 status: active
 created: 2026-07-10
 updated: 2026-07-10
 aliases:
-  - "Позиционирование демо-продукта"
-tags: [project, demo-product, positioning, strategy]
-source_path: "01_now/projects/YYYY-demo-product-positioning-strategy/README.md"
+  - "Позиционирование Acme Shop"
+tags: [project, acme-shop, positioning, strategy]
+source_path: "01_now/projects/2026-acme-shop-positioning-strategy/README.md"
 freshness: seasonal
 expires: 2027-01-10
 knowledge_criticality: medium
@@ -24,19 +24,19 @@ verification_status: unverified
 curation_mode: llm_explicit_request
 ---
 
-# Позиционирование демо-продукта
+# Позиционирование Acme Shop
 
 ## Суть
-Проект по выбору ядра позиционирования демо-продукта: одна формулировка, проверяемая подстановкой конкурента, с аргументами против альтернатив.
+Проект по выбору ядра позиционирования Acme Shop: одна формулировка, проверяемая подстановкой конкурента, с аргументами против альтернатив.
 
 ## Детали
-- Контур: demo-product.
+- Контур: acme-shop.
 - Task Mode: `operational`.
 - Service files:
-  - `plan.md` — контракт проекта: цель, границы, рубежи, критерии.
-  - `tasks.md` — очередь исполнения текущего рубежа.
-  - `context.md` — устойчивые инварианты проекта.
-  - `log.md` — хронология решений.
+  - [plan.md](./plan.md) — контракт проекта: цель, границы, рубежи, критерии.
+  - [tasks.md](./tasks.md) — очередь исполнения текущего рубежа.
+  - [context.md](./context.md) — устойчивые инварианты проекта.
+  - [log.md](./log.md) — хронология решений.
 
 ## Следующий шаг
 Начать M1: карта конкурентного поля.
@@ -48,15 +48,15 @@ curation_mode: llm_explicit_request
 
 ```markdown
 ---
-id: YYYY-demo-product-positioning-strategy-context
+id: 2026-acme-shop-positioning-strategy-context
 type: project
 status: active
 created: 2026-07-10
 updated: 2026-07-10
 aliases:
-  - "Контекст — позиционирование демо-продукта"
-tags: [project, context, demo-product, positioning]
-source_path: "01_now/projects/YYYY-demo-product-positioning-strategy/context.md"
+  - "Контекст — позиционирование Acme Shop"
+tags: [project, context, acme-shop, positioning]
+source_path: "01_now/projects/2026-acme-shop-positioning-strategy/context.md"
 knowledge_criticality: medium
 verification_status: unverified
 curation_mode: llm_explicit_request
@@ -65,7 +65,7 @@ curation_mode: llm_explicit_request
 # Context
 
 ## Суть
-Устойчивые решения проекта позиционирования демо-продукта.
+Устойчивые решения проекта позиционирования Acme Shop.
 
 ## Детали
 - Термины:
@@ -78,7 +78,7 @@ curation_mode: llm_explicit_request
   - Выбрано одно ядро с обоснованием против двух альтернатив.
   - Ядро проходит лакмус-тест подстановкой конкурента.
 - Источник правды:
-  - `plan.md`.
+  - [plan.md](./plan.md).
   - Ранее собранный конкурентный обзор (ссылка добавляется при подключении).
 - Зависимости:
   - Материалы обсуждения из чата-источника.
@@ -89,21 +89,21 @@ curation_mode: llm_explicit_request
 
 ## tasks.md — очередь исполнения
 
-Только исполнение. `tasks.md` производен от `plan.md`: объявлен `Task Mode`, указан `Current Milestone`, ровно один Active-шаг, локальные Exit Criteria, короткий `Drift Guard (short)`, Next. **Запрещено:** `Goal`, `Milestones`, `Contingency`, `Quality Criteria`, секция `Blocked` (Правило 10).
+Только исполнение. `tasks.md` производен от `plan.md`: объявлен `Task Mode`, указан `Current Milestone`, ровно один Active-шаг, `Пользовательский результат шага`, локальные Exit Criteria, короткий `Drift Guard (short)`, Next. **Запрещено:** `Goal`, `Milestones`, `Contingency`, `Quality Criteria`, секция `Blocked` (Правило 10).
 
 ### Вариант operational
 
 ```markdown
 ---
-id: YYYY-demo-product-positioning-strategy-tasks
+id: 2026-acme-shop-positioning-strategy-tasks
 type: tasks
 status: active
 created: 2026-07-10
 updated: 2026-07-10
 aliases:
-  - "Задачи — позиционирование демо-продукта"
-tags: [project, tasks, demo-product, positioning]
-source_path: "01_now/projects/YYYY-demo-product-positioning-strategy/tasks.md"
+  - "Задачи — позиционирование Acme Shop"
+tags: [project, tasks, acme-shop, positioning]
+source_path: "01_now/projects/2026-acme-shop-positioning-strategy/tasks.md"
 knowledge_criticality: medium
 verification_status: unverified
 curation_mode: llm_explicit_request
@@ -114,10 +114,13 @@ curation_mode: llm_explicit_request
 Task Mode: `operational`
 
 ## Current Milestone
-`M1 — Карта конкурентного поля` из `plan.md`
+[M1 — Карта конкурентного поля](./plan.md#m1--карта-конкурентного-поля)
 
 ## Active
 - [ ] Собрать карту конкурентного поля: 5+ прямых конкурентов, их ядро и занятые слова.
+
+## Пользовательский результат шага
+Владелец видит карту занятых позиций и может отсечь неотличимые варианты до выбора ядра.
 
 ## Exit Criteria
 - Таблица конкурентов заполнена, видно, какие слова заняты.
@@ -135,7 +138,7 @@ Task Mode: `operational`
 
 ### Вариант development
 
-Для `development` минимум: `Current Milestone` (ссылка на пункт `plan.md`), `Active Step`, `Exit Criteria`, `Drift Guard (short)`, `Next`. Блокеры — в `plan.md §Blockers`, не здесь.
+Для `development` минимум: `Current Milestone` (ссылка на пункт `plan.md`), `Active Step`, `Пользовательский результат шага`, `Exit Criteria`, `Drift Guard (short)`, `Next`. Блокеры — в `plan.md §Blockers`, не здесь.
 
 ```markdown
 # Tasks
@@ -143,10 +146,13 @@ Task Mode: `operational`
 Task Mode: `development`
 
 ## Current Milestone
-`M1 — Каркас` из `plan.md`
+[M1 — Каркас](./plan.md#m1--каркас)
 
 ## Active Step
 - [ ] Инициализировать репозиторий и собрать пустой каркас.
+
+## Пользовательский результат шага
+Владелец может запустить минимальную рабочую версию и проверить основной сценарий.
 
 ## Exit Criteria
 - Проект собирается, самопроверка проходит.
@@ -167,15 +173,15 @@ Task Mode: `development`
 
 ```markdown
 ---
-id: YYYY-demo-product-positioning-strategy-log
+id: 2026-acme-shop-positioning-strategy-log
 type: log
 status: active
 created: 2026-07-10
 updated: 2026-07-10
 aliases:
-  - "Журнал — позиционирование демо-продукта"
-tags: [project, log, demo-product, positioning]
-source_path: "01_now/projects/YYYY-demo-product-positioning-strategy/log.md"
+  - "Журнал — позиционирование Acme Shop"
+tags: [project, log, acme-shop, positioning]
+source_path: "01_now/projects/2026-acme-shop-positioning-strategy/log.md"
 knowledge_criticality: medium
 verification_status: unverified
 curation_mode: llm_explicit_request
@@ -184,12 +190,12 @@ curation_mode: llm_explicit_request
 # Project Log
 
 ## Суть
-Ключевые решения и изменения состояния проекта позиционирования демо-продукта.
+Ключевые решения и изменения состояния проекта позиционирования Acme Shop.
 
 ## Детали
 
 ### 2026-07-10 — Создан проект
-- Проект выделен из обсуждения в чате: демо-продукт «звучит как все», нужно ядро позиционирования.
+- Проект выделен из обсуждения в чате: Acme Shop «звучит как все», нужно ядро позиционирования.
 - Зафиксированы цель, границы (только ядро, не лендинг), режим `operational`.
 - План составлен агентом: 3 рубежа (карта поля → кандидаты → выбор), критерии качества заданы.
 - Принятые допущения: российский рынок, прямые конкуренты; зафиксированы в Intent Lock.
@@ -206,12 +212,12 @@ curation_mode: llm_explicit_request
 Добавь проект в актуальный каталог под нужным контуром. Формат строки — как у соседних записей файла (сверься с ним перед правкой, стиль может отличаться):
 
 ```markdown
-- `Позиционирование демо-продукта` → `./projects/YYYY-demo-product-positioning-strategy/README.md` — выбор ядра позиционирования. `operational`, active.
+- [Позиционирование Acme Shop](./projects/2026-acme-shop-positioning-strategy/README.md) — выбор ядра позиционирования. `operational`, active.
 ```
 
-### Дополнительный индекс проектов
+### 01_now/projects/README.md
 
-Если в конкретном хранилище есть отдельный `01_now/projects/README.md`, он обычно автогенерируется в блоке `AUTOGEN-NAV` — вручную список подкаталогов не трогай. Достаточно, что папка с `README.md` создана; при следующем прогоне автонавигации проект появится. Если автогенерация не запускается сама — добавь строку в блок вручную, сохранив формат.
+Каталог здесь автогенерируется в блоке `AUTOGEN-NAV` — вручную список подкаталогов не трогай. Достаточно, что папка с `README.md` создана; при следующем прогоне автонавигации проект появится. Если автогенерация не запускается сама — добавь строку в блок вручную, сохранив формат.
 
 ## Заметка по development-проектам
 

@@ -1,9 +1,11 @@
-# 01_now / projects / 2026-vault-methodology-starter-pack-promotion / worktree / vault-methodology-starter-pack / skills / slide-copywriter
+# skills / slide-copywriter
 
 Навигационный указатель каталога.
 
 <!-- AUTOGEN-NAV START -->
 ## Автодобавленные ссылки
+### Файлы каталога
+- [SKILL.md](./SKILL.md)
 ### Подкаталоги
 - [references](./references/README.md)
 <!-- AUTOGEN-NAV END -->

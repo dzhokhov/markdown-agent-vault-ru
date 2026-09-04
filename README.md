@@ -71,6 +71,29 @@ source_path: "README.md"
 
 См. руководство [Контурные GitHub-репозитории](./docs/github-contour-repositories.md) и пример [examples/github-contour-repository](./examples/github-contour-repository/README.md).
 
+## Быстрый старт
+
+Понадобится только AI-агент с доступом к файлам и терминалу (Claude Code, Cowork или аналог). Скопируй агенту этот промт целиком:
+
+```text
+Разверни мне файловое хранилище из репозитория
+https://github.com/dzhokhov/markdown-agent-vault-ru
+Все команды выполняешь ты; я команды не выполняю и файлы руками не редактирую.
+1. Спроси, в какой папке разместить хранилище, и дождись ответа.
+2. Проверь наличие git командой: git --version
+3. Git есть — клонируй репозиторий в выбранную папку:
+   git clone https://github.com/dzhokhov/markdown-agent-vault-ru.git
+4. Git нет — скачай и распакуй архив сам:
+   curl -L -o vault.zip https://github.com/dzhokhov/markdown-agent-vault-ru/archive/refs/heads/main.zip
+   tar -xf vault.zip
+   Содержимое распакованной папки перенеси в выбранную папку.
+5. Открой папку хранилища и прочитай START_HERE.md.
+6. Предложи мне первичную настройку — скилл vault-setup. Признак ненастроенного
+   хранилища: конфигов в meta/config/ нет или в них status: template.
+```
+
+Запасной путь без терминала: скачай ZIP кнопкой GitHub «Code → Download ZIP», распакуй двойным щелчком и покажи агенту распакованную папку.
+
 ## Как установить
 
 Этот репозиторий не устанавливается как приложение. Это стартовая папка для Markdown-хранилища, с которой работает AI-агент.
