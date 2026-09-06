@@ -17,5 +17,6 @@ source_path: "meta/prompts/README.md"
 <!-- AUTOGEN-NAV START -->
 ## Автодобавленные ссылки
 ### Файлы каталога
+- [memory-refresh.md](./memory-refresh.md) — обновление текущей памяти по новым источникам.
 - [memory-audit.md](./memory-audit.md)
 <!-- AUTOGEN-NAV END -->

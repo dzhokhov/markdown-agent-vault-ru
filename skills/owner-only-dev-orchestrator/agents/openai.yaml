@@ -1,4 +1,6 @@
 interface:
-  display_name: "Owner-Only Dev Orchestrator"
-  short_description: "Run full owner-only dev workflow with GREEN/YELLOW/RED output"
-  default_prompt: "Orchestrate this development task end-to-end with minimal owner involvement and strict self-verification."
+  display_name: "Команда разработки под ключ"
+  short_description: "Ведёт продукт от цели до проверенного результата"
+  default_prompt: "Используй $owner-only-dev-orchestrator: сам выбери применимые продуктовые и технические роли, предложи первый ценный результат и доведи изменение до независимой проверки."
+policy:
+  allow_implicit_invocation: true

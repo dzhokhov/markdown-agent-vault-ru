@@ -368,9 +368,9 @@ Last rewrite: 2026-04-15
 
 ```markdown
 ## Упомянуто вскользь
-- #onboarding: Таня сказала, что у них был провал с видеогайдами в 2025
-- #pricing: Дима упомянул желание пересмотреть scale-тариф
-- #hiring: был вопрос про Казанова, замяли
+- #onboarding: в учебном примере участник предложил проверить понятность видеогида
+- #pricing: в учебном примере обсуждали будущую проверку тарифов
+- #hiring: вопрос о найме перенесли на следующую встречу
 ```
 
 Агент при bootstrap проекта, если в запросе звучит тема `X`, делает:
@@ -450,7 +450,7 @@ grep -rh "#<X>" 01_now/projects/*/materials/**/meetings/
 - [meeting-processing/SKILL.md](../skills/meeting-processing/SKILL.md) — основной потребитель методологии, переписывается под §9.
 - [owner-only-agent-dev-standard-2026-03.md](./ai/owner-only-agent-dev-standard-2026-03.md) — базовый ask/plan, на котором основан `plan.md`.
 - [general-rules-for-agentic-development-in-local-vault-2026-03.md](./ai/general-rules-for-agentic-development-in-local-vault-2026-03.md) — требование разделения policy/memory/execution, на котором основано разделение `plan.md` и `tasks.md`.
-- [meta/context.md](../meta/context.md) — профиль владельца (flow-worker, не driven-by-list), обосновывает §7 и §7.6.
+- [meta/context.md](../meta/context.md) — настройки рабочей среды; конкретный способ ведения личных задач выбирается при настройке.
 
 ## 13. Статус
 
@@ -462,5 +462,5 @@ grep -rh "#<X>" 01_now/projects/*/materials/**/meetings/
 
 1. Этап 1: AGENTS.md (Правила 11–14) + `meta/rules/task-routing.md` + патчи существующих rules + README разделов.
 2. Этап 2: шаблоны в `meta/templates/` + перепись скилла `meeting-processing` + патчи 7 других скиллов.
-3. Этап 3: пилот на `2026-click-ru-master-redesign`.
+3. Этап 3: пилот на `2026-acme-shop-redesign` (вымышленный пример).
 4. Этап 4: раскатка на остальные проекты.

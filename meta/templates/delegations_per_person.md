@@ -10,7 +10,7 @@ tags: [delegations, ops, <contour-slug>, person-<person-slug>]
 source_path: "01_now/ops/<contour-slug>/delegations/<person-slug>.md"
 contour: <contour-slug>
 person_slug: <person-slug>
-tracker_sot: <external-tracker|none>
+tracker_sot: <asana|youtrack|jira|kommo|linear|none>
 knowledge_criticality: medium
 verification_status: active
 ---
@@ -26,7 +26,7 @@ verification_status: active
 ## Правила
 
 - Один файл = одна пара `(контур, делегат)`. Если делегат работает в двух контурах — два файла, потому что SoT-трекер у контура свой.
-- Источник правды задачи — всегда во внешнем трекере, указанном в `tracker_sot` в служебной разметке.
+- SoT задачи — всегда во внешнем трекере (Asana/YouTrack/Jira/Kommo), указанном в `tracker_sot` frontmatter.
 - Формат строки:
   ```
   - [ ] 2026-04-12 → суть задачи [TRACKER-123](url) • due: 2026-04-20 • [встреча](rel-link)

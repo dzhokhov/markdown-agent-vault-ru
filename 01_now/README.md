@@ -18,8 +18,8 @@ source_path: "01_now/README.md"
 
 ## Детали
 
-- `projects/` — активные проекты.
-- `ops/` — долгоживущие операционные контуры.
+- [Активные проекты](./projects/README.md).
+- [Постоянные области работы](./ops/README.md).
 - `personal/` — личные обязательства владельца.
 
 Новый проект создаётся в `projects/<год>-<slug>/` с файлами `README.md`, `plan.md`, `tasks.md`, `context.md`, `log.md`.

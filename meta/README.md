@@ -18,6 +18,7 @@ source_path: "meta/README.md"
 
 ## Детали
 
+- [Настройки](./config/README.md)
 - [Правила](./rules/)
 - [Шаблоны](./templates/)
 - [Слой доверия памяти](./memory/README.md)

@@ -14,6 +14,24 @@ IGNORED_TARGETS = {
     "./relative-path.md",
     "./abs-path-to-SKILL.md",
 }
+FENCE_RE = re.compile(r"^ {0,3}(`{3,}|~{3,})(.*)$")
+
+
+def prose_lines(text: str):
+    """Yield lines outside Markdown fences, respecting marker and fence length."""
+    fence = None
+    for line in text.splitlines(keepends=True):
+        match = FENCE_RE.match(line)
+        if fence is not None:
+            if (match and match.group(1)[0] == fence[0]
+                    and len(match.group(1)) >= len(fence)
+                    and not match.group(2).strip()):
+                fence = None
+            continue
+        if match and (match.group(1)[0] == "~" or "`" not in match.group(2)):
+            fence = match.group(1)
+            continue
+        yield line
 
 
 def iter_markdown_files(root: Path):
@@ -45,7 +63,7 @@ def main() -> int:
 
     for path in iter_markdown_files(root):
         text = path.read_text(encoding="utf-8", errors="ignore")
-        for match in LINK_RE.finditer(text):
+        for match in LINK_RE.finditer("".join(prose_lines(text))):
             target = match.group(1).split("#", 1)[0]
             if should_ignore(path, target):
                 continue

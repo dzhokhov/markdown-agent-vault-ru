@@ -19,6 +19,7 @@ source_path: "skills/README.md"
 ## Детали
 
 ### Операционные скиллы
+- [vault-setup](./vault-setup/SKILL.md) — первичная настройка и импорт материалов.
 - [vault-onboarding-guide](./vault-onboarding-guide/SKILL.md) — интерактивный проводник по первому запуску хранилища: учебные циклы, практика на файлах, удержание маршрута.
 - [project-creator](./project-creator/SKILL.md) — создание нового проекта с автономным `plan.md`, стартовыми файлами и обновлением индексов.
 - [skill-creator](./skill-creator/SKILL.md) — создание, доработка, проверка и оптимизация скиллов для агентов.

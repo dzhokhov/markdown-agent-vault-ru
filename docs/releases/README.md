@@ -19,6 +19,7 @@ source_path: "docs/releases/README.md"
 <!-- AUTOGEN-NAV START -->
 ## Автодобавленные ссылки
 ### Файлы каталога
+- [v1.0.0-beta.1.md](./v1.0.0-beta.1.md) — тест новой архитектуры.
 - [v0.1.0.md](./v0.1.0.md)
 - [v0.1.1.md](./v0.1.1.md)
 - [v0.1.2.md](./v0.1.2.md)

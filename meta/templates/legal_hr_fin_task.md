@@ -6,7 +6,7 @@ created: <YYYY-MM-DD>
 updated: 2026-03-07
 aliases:
   - "Шаблон задачи Legal/HR/Finance"
-tags: [template, legal, hr, finance, task]
+tags: [template, legal, hr, finance, youtrack]
 source_path: "meta/templates/legal_hr_fin_task.md"
 knowledge_criticality: low
 verification_status: unverified
@@ -14,11 +14,11 @@ verified_by_me: false
 curation_mode: none
 ---
 
-# Шаблон задачи для юридических, кадровых и финансовых вопросов
+# Шаблон задачи для Legal / HR / Finance (YouTrack)
 
 ## 0) Карточка
 - `Tracker ID`: <FIN-0000 / HR-0000 / LEGAL-0000>
-- `URL`: <ссылка на задачу во внешнем трекере>
+- `URL`: <ссылка на задачу в YouTrack>
 - `Project`: <Финотдел / HR / Legal>
 - `Type`: <Epic / Task / Subtask>
 - `Priority`: <critical / normal / minor>
@@ -76,7 +76,7 @@ curation_mode: none
 - Что не делаем (границы задачи).
 
 ### 5. Затронутые процессы и системы
-- Системы: <CRM / трекер задач / почта / документы / ...>
+- Системы: <amoCRM / YouTrack / почта / docs / ...>
 - Процессы: <онбординг / увольнение / выплаты / доступы / документооборот>
 - Подразделения: <Legal / HR / Finance / IT / Sales>
 

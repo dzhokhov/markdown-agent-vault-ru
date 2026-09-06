@@ -3,7 +3,7 @@ id: <yyyy-mm-dd>-<project-slug>-readme
 type: project
 status: active
 created: <YYYY-MM-DD>
-updated: 2026-04-15
+updated: 2026-06-15
 aliases:
   - "Шаблон индекса проекта"
 tags: [project, work]
@@ -20,9 +20,10 @@ curation_mode: none
 Короткая формулировка проекта — одно предложение. Подробности (Goal, Non-goals, Appetite, Milestones) — в [plan.md](./plan.md), не здесь.
 
 ## Детали
-- Контур: <название области или продукта>
+- Контур: <имя контура из карты `meta/config/contours-map.md`, например acme-shop>
 - Task Mode: `operational` | `development`
 - Артефакты:
+- Текущая картина: <нет | [название](./current-*.md)>  # если проекту нужен отдельный пересобираемый слой актуального состояния
 - Service files:
   - [plan.md](./plan.md) — контракт проекта (Goal/Non-goals/Appetite/Milestones/Drift Guard/Contingency)
   - [tasks.md](./tasks.md) — execution-очередь текущего milestone
